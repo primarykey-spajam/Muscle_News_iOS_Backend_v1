@@ -6,7 +6,7 @@ class User(models.Model):
     userId = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     anqResult = models.CharField(max_length=30)
 
-class Muscle(models.Model):
+class News(models.Model):
     newsId = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     newsText = models.TextField()
     newsVoice = models.FileField()
