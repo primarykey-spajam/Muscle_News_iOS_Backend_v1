@@ -7,7 +7,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from ipdb import set_trace
-from get_text import get_text
+import get_text.get_text
 
 
 OUTPUT_FILE = './test.mp3'
@@ -119,8 +119,8 @@ def main(list_keywd):
 	"""メイン処理"""
 
 	# (1) 合成内容設定
-	#target_text = get_text(list_keywd)
-	target_text = '今日のニュースです。'
+	target_text = get_text(list_keywd)
+	target_text = target_text[:1000]
 	target_file = 'output.mp3'	# mp3, ogg, m4a, wav いずれかのファイルパス
 
 	# 出力ファイルから出力形式を決定
